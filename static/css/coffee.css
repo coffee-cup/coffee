@@ -87,7 +87,7 @@ header.large {
     margin-bottom: 2rem;
     border-left: none;
     /* border-bottom: solid 4px var(--primary-colour); */
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
 }
 
 .heading {
@@ -157,16 +157,17 @@ li {
 
 .list {
     list-style-type: none;
+    margin-top: 2rem;
     padding: 0;
 }
 
 .list-item {
-    margin: 1.4rem 0;
+    margin: 1rem 0;
 }
 
 .list-title {
     margin-top: 0;
-    margin-bottom: 0.1rem;
+    margin-bottom: -0.2rem;
 }
 
 .date {
