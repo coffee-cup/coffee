@@ -14,18 +14,28 @@
 
     <link rel="stylesheet" href="{{ "/css/code.css" | relURL }}" />
 
+    <script src="{{ "/js/highlight.pack.js" | relURL }}" />
+    <script>
+      addEventListener('load', function() {
+        hljs.initHighlighting();
+      })
+    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
   </head>
 
   <body>
 
    <div class="container">
-    <header class="{{ if .IsHome }}large{{ end }}">
-      <a href="/" class="none">
-        <h1 class="heading">
-          {{ .Site.Title }}
-        </h1>
-      </a>
+     <div class="full">
+       <header class="{{ if .IsHome }}large{{ end }}">
+         <a href="/" class="none">
+           <h1 class="heading">
+             {{ .Site.Title }}
+           </h1>
+         </a>
 
-      {{ partial "nav.html" . }}
-    </header>
+        {{ partial "nav.html" . }}
+       </header>
 

@@ -1,4 +1,6 @@
 
+    </div> <!-- Full -->
+
     <footer class="sans">
       {{ with .Site.Params.footer }}
       {{ . | markdownify }}
@@ -6,14 +8,6 @@
     </footer>
 
     </div> <!-- Container -->
-
-    <script src="{{ "/js/highlight.pack.js" | relURL }}" />
-    <script>
-      addEventListener('load', function() {
-        hljs.initHighlighting();
-      })
-    </script>
-    <script>hljs.initHighlightingOnLoad();</script>
 
   </body>
 </html>
