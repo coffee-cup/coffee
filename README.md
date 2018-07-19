@@ -1,5 +1,11 @@
 # ☕ Coffee Theme for Hugo
 
+## Features
+
+- Syntax highlighting using [highlight.js](https://highlightjs.org/)
+- Montserrat font for headings, Merriweather for paragraphs
+- Clean interface
+
 ## TODO
 
 This is a new theme, bear with me.
@@ -7,9 +13,9 @@ This is a new theme, bear with me.
 - [ ] Screenshots
 - [ ] Example Site
 
-# Quick start
+## Quick start
 
-## 1. Get the theme
+### 1. Get the theme
 
 Run from the root of your Hugo site:
 
@@ -26,12 +32,12 @@ you need to run:
 $ git submodule add https://github.com/coffee-cup/coffee.git.git themes/coffee
 ```
 
-## 2. Configure your site
+### 2. Configure your site
 
 From the exampleSite, copy `config.toml` to the root folder of your Hugo site
 and change the fields as you like. There are helpful hints in the file.
 
-## 3. Create pages
+### 3. Create pages
 
 Run:
 
@@ -42,7 +48,7 @@ $ hugo new page.md
 Where `page` can be anything you like. A contact page, a bio, dates for your
 upcoming world tour... Anything!
 
-## 4. Design your main menu and index page
+### 4. Design your main menu and index page
 
 In `config.toml`, customize the entries for `[[menu.main]]`. This changes the
 navigation buttons in the header.
@@ -63,7 +69,7 @@ navigation buttons in the header.
     footer = "Project by [Jake Runzer](https://jakerunzer.com)"
 ```
 
-## Preview your site locally
+### Preview your site locally
 
 Use Hugo's built-in server to see your site in action as you make changes.
 
@@ -73,7 +79,7 @@ $ hugo serve -t sam
 
 Visit `localhost:1313` in your browser to see a live preview of your site.
 
-## Posts
+### Posts
 
 To create a new post, run:
 
@@ -81,14 +87,14 @@ To create a new post, run:
 $ hugo new posts/your-post-title.md
 ```
 
-# Editing the theme
+## Editing the theme
 
 _TODO_
 
-# Contributing
+## Contributing
 
 Pull requests for bug fixes and enhancements are welcome.
 
-# License
+## License
 
 MIT
