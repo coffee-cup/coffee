@@ -1,3 +1,14 @@
+{{/*<!-- Styles -->*/}}
+{{ $code := resources.Get "sass/code.scss" }}
+{{ $fonts := resources.Get "sass/fonts.scss" }}
+{{ $coffee := resources.Get "sass/coffee.scss" }}
+{{ $style := slice $coffee $code $fonts | resources.Concat "coffee.css" | toCSS | minify | fingerprint }}
+
+{{/*<!-- JavaScript -->*/}}
+{{ $highlight := resources.Get "js/highlight.pack.js" }}
+{{ $custom := resources.Get "js/custom.js" }}
+{{ $js := slice $highlight $custom | resources.Concat "coffee.js" | minify | fingerprint }}
+
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
@@ -5,24 +16,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="{{ "/css/coffee.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"> --
     {{ range .Site.Params.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}
 
-    <link rel="stylesheet" href="{{ "/css/code.css" | relURL }}" />
-
-    <script src="{{ "/js/highlight.pack.js" | relURL }}" />
+    <script src="{{ $js.RelPermalink }}" />
     <script>
       addEventListener('load', function() {
         hljs.initHighlighting();
       })
     </script>
     <script>hljs.initHighlightingOnLoad();</script>
-
-
   </head>
 
   <body>
