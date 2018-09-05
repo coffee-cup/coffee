@@ -1,8 +1,5 @@
 {{/*<!-- Styles -->*/}}
-{{ $code := resources.Get "sass/code.scss" }}
-{{ $fonts := resources.Get "sass/fonts.scss" }}
-{{ $coffee := resources.Get "sass/coffee.scss" }}
-{{ $style := slice $coffee $code $fonts | resources.Concat "coffee.css" | toCSS | minify | fingerprint }}
+{{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
 
 {{/*<!-- JavaScript -->*/}}
 {{ $highlight := resources.Get "js/highlight.pack.js" }}
@@ -14,11 +11,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}"> --
+    {{ if .IsHome }}
+    <title>{{ .Site.Title }}</title>
+    {{ else }}
+    <title>{{ .Title }}</title>
+    {{ end }}
+
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
     {{ range .Site.Params.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}

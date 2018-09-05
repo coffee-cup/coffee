@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'queries';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.6;
+    color: $text-colour;
+    background-color: $bg-colour;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include break(xsmall) {
+        font-size: 16px;
+    }
+}
+
+::selection {
+    background: $selection-colour;
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: $selection-colour;
+    /* Gecko Browsers */
+}
