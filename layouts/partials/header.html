@@ -38,11 +38,11 @@
    <div class="container">
      <div class="full">
        <header class="{{ if .IsHome }}large{{ end }}">
-         <a href="/" class="none">
-           <h1 class="heading">
+         <h1 class="heading">
+           <a href="/" class="none">
              {{ .Site.Title }}
-           </h1>
-         </a>
+           </a>
+         </h1>
 
         {{ partial "nav.html" . }}
        </header>
