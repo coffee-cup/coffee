@@ -3,7 +3,9 @@
 
     <footer class="sans">
       {{ with .Site.Params.footer }}
-      {{ . | markdownify }}
+      <h5>
+         {{ . | markdownify }}
+      </h5>
       {{ end }}
     </footer>
 
