@@ -1,6 +1,8 @@
 
+    </div> <!-- Content -->
     </div> <!-- Full -->
 
+    {{ if not .IsHome }}
     <footer class="sans">
       {{ with .Site.Params.footer }}
       <h5>
@@ -8,6 +10,7 @@
       </h5>
       {{ end }}
     </footer>
+    {{ end }}
 
     </div> <!-- Container -->
 

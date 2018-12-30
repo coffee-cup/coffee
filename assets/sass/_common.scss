@@ -8,6 +8,14 @@
     min-height: 90vh;
 }
 
+.flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -25,7 +33,6 @@ header.large {
     margin-top: 2rem;
     margin-bottom: 0;
     border-left: none;
-    /* border-bottom: solid 4px var(--primary-colour); */
     padding-bottom: 0rem;
 }
 
@@ -44,6 +51,10 @@ header ul {
     margin: 0;
     list-style: none;
     padding-left: 0;
+}
+
+.sep {
+    border-bottom: solid 4px $primary-colour;
 }
 
 nav ul {
@@ -139,3 +150,7 @@ footer {
 .cf:after   { content: " "; display: table; }
 .cf:after   { clear: both; }
 .cf         { *zoom: 1; }
+
+.author {
+    display: none;
+}
