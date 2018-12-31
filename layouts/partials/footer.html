@@ -4,6 +4,8 @@
 
     {{ if not .IsHome }}
     <footer class="sans">
+      {{ partial "sep.html" }}
+
       {{ with .Site.Params.footer }}
       <h5>
          {{ . | markdownify }}

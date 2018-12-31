@@ -31,6 +31,8 @@
       })
     </script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+
   </head>
 
   <body>
@@ -38,13 +40,21 @@
    <div class="container">
      <div class="full flex {{ if .IsHome }}center{{ end }}">
        <div class="content">
-	<header class="{{ if .IsHome }}large{{ end }}">
-	    <h1 class="heading">
-	    <a href="/" class="none">
-		{{ .Site.Params.Main }}
-	    </a>
+        <header class="{{ if .IsHome }}large{{ end }}">
+	  {{ if .IsHome }}
+	    <h1 class="heading heading1">
+	      {{ .Site.Params.Heading1 }}
 	    </h1>
+	    <h1 class="heading heading2">
+	      {{ .Site.Params.Heading2 }}
+	    </h1>
+	  {{ else }}
+	    <a href="/" class="none">
+		<h2 class="heading short">
+		{{ .Site.Params.Short }}
+		</h2>
+	    </a>
+	  {{ end }}
 
-	    {{ partial "nav.html" . }}
+          <!-- {{ partial "nav.html" . }} -->
 	</header>
-

@@ -13,9 +13,3 @@ min_version = "0.01"
 [author]
   name = "Jake Runzer"
   homepage = "https://jakerunzer.com"
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
