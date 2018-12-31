@@ -49,7 +49,7 @@
 	      {{ .Site.Params.Heading2 }}
 	    </h1>
 	  {{ else }}
-	    <a href="/" class="none">
+	    <a href="/{{ if .IsPage }}{{ .Section }}{{ else }}{{ end }}" class="none">
 		<h2 class="heading short">
 		{{ .Site.Params.Short }}
 		</h2>
