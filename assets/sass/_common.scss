@@ -25,6 +25,10 @@ img {
     max-width: 100%;
 }
 
+pre {
+    max-width: calc(100vw - (2 * #{$gutter}));
+}
+
 header {
     margin-top: 1rem;
     margin-bottom: 3rem;
