@@ -58,18 +58,25 @@
       <div class="content">
         <header class="{{ if .IsHome }}large{{ end }}">
           {{ if .IsHome }}
-          <h1 class="heading heading1">
-            {{ .Site.Params.Heading1 }}
-          </h1>
-          <h1 class="heading heading2">
-            {{ .Site.Params.Heading2 }}
-          </h1>
-          {{ else }}
-          <a href="/{{ if .IsPage }}{{ .Section }}{{ else }}{{ end }}" class="none">
-            <h2 class="heading short">
-              {{ .Site.Params.Short }}
-            </h2>
-          </a>
+
+	    <h1 class="heading heading1">
+		{{ .Site.Params.Heading1 }}
+	    </h1>
+
+	    {{ if .Site.Params.Heading2 }}
+		<h1 class="heading heading2">
+		    {{ .Site.Params.Heading2 }}
+		</h1>
+	    {{ end }}
+
+	    {{ else }}
+
+	    <a href="/{{ if .IsPage }}{{ .Section }}{{ else }}{{ end }}" class="none">
+		<h2 class="heading short">
+		{{ .Site.Params.Short }}
+		</h2>
+	    </a>
+
           {{ end }}
 
           <!-- {{ partial "nav.html" . }} -->
