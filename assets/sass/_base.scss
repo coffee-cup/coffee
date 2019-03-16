@@ -1,4 +1,3 @@
-@import 'variables';
 @import 'queries';
 
 * {
@@ -12,8 +11,8 @@ html {
 body {
     font-size: 16px;
     line-height: 1.5;
-    color: $text-colour;
-    background-color: $bg-colour;
+    color: var(--text-colour);
+    background-color: var(--bg-colour);
 
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
@@ -25,12 +24,12 @@ body {
 }
 
 ::selection {
-    background: $selection-colour;
+    background: var(--selection-colour);
     /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-    background: $selection-colour;
+    background: var(--selection-colour);
     /* Gecko Browsers */
 }
 

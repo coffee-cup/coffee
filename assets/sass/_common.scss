@@ -1,7 +1,7 @@
 .container {
-    max-width: $max-width;
+    max-width: var(--max-width);
     margin: auto;
-    padding: 0 $gutter;
+    padding: 0 var(--gutter);
 }
 
 .full {
@@ -26,7 +26,7 @@ img {
 }
 
 pre {
-    max-width: calc(100vw - (2 * #{$gutter}));
+    max-width: calc(100vw - (2 * #{var(--gutter)}));
 }
 
 header {
@@ -68,7 +68,7 @@ header ul {
 }
 
 .sep {
-    border-bottom: solid 4px $primary-colour;
+    border-bottom: solid 4px var(--primary-colour);
 }
 
 nav ul {
@@ -84,19 +84,19 @@ nav li {
 
 nav a,
 nav a:visited {
-    color: $text-colour;
-    font-weight: $medium;
+    color: var(--text-colour);
+    font-weight: var(--medium);
     font-size: 0.9em;
     text-decoration: none;
 }
 
 nav li.current a {
-    color: $primary-colour;
+    color: var(--primary-colour);
 }
 
 a,
 a:visited {
-    color: $primary-colour;
+    color: var(--primary-colour);
     opacity: 1;
     transition: opacity .15s ease-in;
     text-decoration: none;
@@ -104,11 +104,11 @@ a:visited {
 
 a:hover {
     opacity: 0.6;
-    color: $primary-colour;
+    color: var(--primary-colour);
 }
 
 a.none {
-    color: $text-colour;
+    color: var(--text-colour);
 }
 
 blockquote {
@@ -144,7 +144,7 @@ li {
 
 .date {
     margin-top: -1.4rem;
-    color: $light-colour;
+    color: var(--light-colour);
     font-size: 1em;
 }
 
@@ -163,11 +163,11 @@ footer {
 }
 
 .medium {
-    font-weight: $medium;
+    font-weight: var(--medium);
 }
 
 .bold {
-    font-weight: $bold;
+    font-weight: var(--bold);
 }
 
 .cf:before,

@@ -1,33 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Merriweather|Montserrat:400,500,700');
-@import 'variables';
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: $sans !important;
+    font-family: var(--sans) !important;
 }
 
 h1,
 h2,
 h3,
 h4 {
-   font-weight: $bold !important;
+   font-weight: var(--bold) !important;
 }
 
 h5 {
-    font-weight: $normal !important;
+    font-weight: var(--normal) !important;
 }
 
 p {
-    font-family: $serif;
+    font-family: var(--serif);
 }
 
 code {
-    font-family: $mono;
+    font-family: var(--mono);
 }
 
 .sans {
-    font-family: $sans;
+    font-family: var(--sans);
 }
