@@ -1,173 +1,173 @@
 .container {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 0 var(--gutter);
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 var(--gutter);
 }
 
 .full {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .narrow {
-    max-width: 30rem;
+  max-width: 30rem;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .center {
-    align-items: center;
+  align-items: center;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 pre {
-    max-width: calc(100vw - (2 * #{var(--gutter)}));
+  max-width: calc(100vw - (2 * #{var(--gutter)}));
 }
 
 header {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding: 0;
 }
 
 header.large {
-    margin-top: 2rem;
-    margin-bottom: 0;
-    border-left: none;
-    padding-bottom: 0rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  border-left: none;
+  padding-bottom: 0rem;
 }
 
 .heading1 {
-    font-size: 8rem;
-    margin-bottom: 0;
-    margin-left: -8px;
+  font-size: 8rem;
+  margin-bottom: 0;
+  margin-left: -8px;
 
-    @include break(small) {
-	font-size: 6rem;
-    }
+  @include break(small) {
+    font-size: 6rem;
+  }
 }
 
 .heading2 {
-    font-size: 2.5rem;
-    margin-top: 0;
+  font-size: 2.5rem;
+  margin-top: 0;
 }
 
 .heading.short {
-    font-size: 1.4em;
+  font-size: 1.4em;
 }
 
 header ul {
-    margin: 0;
-    list-style: none;
-    padding-left: 0;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .sep {
-    border-bottom: solid 4px var(--primary-colour);
+  border-bottom: solid 4px var(--primary-colour);
 }
 
-nav ul {
-    margin: 0;
-    list-style: none;
+.nav ul {
+  margin: 0;
+  list-style: none;
 }
 
-nav li {
-    padding: 0;
-    padding-right: 2rem;
-    float: left;
+.nav li {
+  padding: 0;
+  padding-right: 2rem;
+  float: left;
 }
 
-nav a,
-nav a:visited {
-    color: var(--text-colour);
-    font-weight: var(--medium);
-    font-size: 0.9em;
-    text-decoration: none;
+.nav a,
+.nav a:visited {
+  color: var(--text-colour);
+  font-weight: var(--medium);
+  font-size: 0.9em;
+  text-decoration: none;
 }
 
-nav li.current a {
-    color: var(--primary-colour);
+.nav li.current a {
+  color: var(--primary-colour);
 }
 
 a,
 a:visited {
-    color: var(--primary-colour);
-    opacity: 1;
-    transition: opacity .15s ease-in;
-    text-decoration: none;
+  color: var(--primary-colour);
+  opacity: 1;
+  transition: opacity .15s ease-in;
+  text-decoration: none;
 }
 
 a:hover {
-    opacity: 0.6;
-    color: var(--primary-colour);
+  opacity: 0.6;
+  color: var(--primary-colour);
 }
 
 a.none {
-    color: var(--text-colour);
+  color: var(--text-colour);
 }
 
 blockquote {
-    margin: 0;
-    padding-left: 1rem;
-    color: grey;
-    border-left: solid 4px darkgrey;
+  margin: 0;
+  padding-left: 1rem;
+  color: grey;
+  border-left: solid 4px darkgrey;
 }
 
 li {
-    padding: 0.25rem 0;
-    font-size: 1.3rem;
+  padding: 0.25rem 0;
+  font-size: 1.15rem;
 }
 
 .title {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .list {
-    list-style-type: none;
-    margin-top: 3rem;
-    padding: 0;
+  list-style-type: none;
+  margin-top: 3rem;
+  padding: 0;
 }
 
 .list-item {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .list-title {
-    margin-top: 0;
-    margin-bottom: -0.2rem;
+  margin-top: 0;
+  margin-bottom: -0.2rem;
 }
 
 .date {
-    margin-top: -1.4rem;
-    color: var(--light-colour);
-    font-size: 1em;
+  margin-top: -1.4rem;
+  color: var(--light-colour);
+  font-size: 1em;
 }
 
 .list-date {
-    font-size: 0.9em;
+  font-size: 0.9em;
 }
 
 footer {
-    padding: 2rem 0;
+  padding: 2rem 0;
 
-    h5 {
-	font-size: 1em;
-	margin-top: 2rem;
-	margin-bottom: 0;
-    }
+  h5 {
+    font-size: 1em;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
 }
 
 .medium {
-    font-weight: var(--medium);
+  font-weight: var(--medium);
 }
 
 .bold {
-    font-weight: var(--bold);
+  font-weight: var(--bold);
 }
 
 .cf:before,
@@ -176,9 +176,9 @@ footer {
 .cf         { *zoom: 1; }
 
 .author {
-    display: none;
+  display: none;
 }
 
 .article-meta {
-    margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }

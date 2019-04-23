@@ -55,7 +55,7 @@
 
   <div class="container">
     <div class="full flex {{ if .IsHome }}center{{ end }}">
-      <div class="content">
+      <div>
         <header class="{{ if .IsHome }}large{{ end }}">
           {{ if .IsHome }}
 
@@ -79,5 +79,8 @@
 
           {{ end }}
 
-          <!-- {{ partial "nav.html" . }} -->
+	  {{ if (.Params.nav) }}
+              {{ partial "nav.html" . }}
+	  {{ end }}
+
         </header>

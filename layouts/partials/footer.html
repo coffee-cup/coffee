@@ -2,7 +2,7 @@
     </div> <!-- Content -->
     </div> <!-- Full -->
 
-    {{ if not .IsHome }}
+    {{ if (or (not .IsHome) (.Params.footer)) }}
     <footer class="sans">
       {{ partial "sep.html" }}
 
